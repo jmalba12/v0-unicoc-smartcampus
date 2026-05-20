@@ -40,7 +40,7 @@ export default function DashboardPage() {
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
           <StatsCard
             title="Total Estudiantes"
-            value={dashboardStats.totalStudents.toLocaleString()}
+            value={dashboardStats.totalStudents.toLocaleString("es-CO")}
             description="Matriculados activos"
             icon={GraduationCap}
             trend={{ value: 12, isPositive: true }}
@@ -82,7 +82,7 @@ export default function DashboardPage() {
           />
           <StatsCard
             title="Estudiantes Activos"
-            value={dashboardStats.activeStudents.toLocaleString()}
+            value={dashboardStats.activeStudents.toLocaleString("es-CO")}
             description={`${((dashboardStats.activeStudents / dashboardStats.totalStudents) * 100).toFixed(1)}% del total`}
             icon={TrendingUp}
             iconClassName="bg-cyan-500/10 text-cyan-500"
